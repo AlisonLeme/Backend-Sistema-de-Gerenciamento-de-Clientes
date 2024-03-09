@@ -28,6 +28,32 @@ Este projeto consiste em um sistema de gerenciamento de clientes e otimização 
 2. Instale as dependências: `npm install`
 3. Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis de ambiente necessárias
 
+# Configuração do Banco de Dados PostgreSQL (Opcional)
+
+Este projeto utiliza o PostgreSQL como banco de dados. Você pode optar por configurar e iniciar o banco de dados localmente utilizando Docker, ou instalar e configurar o PostgreSQL manualmente em sua máquina.
+
+## Opção 1: Utilizando Docker Compose
+
+Se você escolher utilizar Docker Compose, siga as instruções abaixo:
+
+### Pré-requisitos
+
+- Docker instalado em seu sistema ([Instruções de instalação do Docker](https://docs.docker.com/get-docker/))
+- Docker Compose instalado em seu sistema ([Instruções de instalação do Docker Compose](https://docs.docker.com/compose/install/))
+
+### Configuração
+
+1. Navegue até o diretório do projeto: `cd Backend-Sistema-de-Gerenciamento-de-Clientes`
+
+### Execução do Banco de Dados
+
+Execute o seguinte comando para iniciar o banco de dados PostgreSQL em um contêiner Docker:
+
+`bash`
+docker-compose up -d
+
+O banco de dados PostgreSQL será iniciado em um contêiner chamado database_teste.
+
 ## Execução
 
 Para iniciar o servidor, execute o seguinte comando:
