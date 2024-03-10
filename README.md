@@ -24,8 +24,14 @@ Este projeto consiste em um sistema de gerenciamento de clientes e otimização 
 
 ## Configuração do Ambiente
 
-1. Clone o repositório: `git clone https://github.com/AlisonLeme/Backend-Sistema-de-Gerenciamento-de-Clientes.git`
-2. Instale as dependências: `npm install`
+1. Clone o repositório:
+```bash
+git clone https://github.com/AlisonLeme/Backend-Sistema-de-Gerenciamento-de-Clientes.git
+```
+2. Instale as dependências:
+```bash
+npm install
+```
 3. Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis de ambiente necessárias
 
     - `PORT`: Esta variável define a porta na qual o servidor backend será executado. Por padrão, a porta 3333 será utilizada.
