@@ -28,6 +28,16 @@ Este projeto consiste em um sistema de gerenciamento de clientes e otimização 
 2. Instale as dependências: `npm install`
 3. Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis de ambiente necessárias
 
+    - `PORT`: Esta variável define a porta na qual o servidor backend será executado. Por padrão, a porta 3333 será utilizada.
+
+    - `DATABASE_USER`: Esta variável define o nome de usuário do banco de dados PostgreSQL.
+
+    - `DATABASE_PASSWORD`: Esta variável define a senha do banco de dados PostgreSQL.
+
+    - `DATABASE_URI`: Esta variável define o URI de conexão com o banco de dados PostgreSQL, incluindo o host e a porta. Por exemplo: `localhost:5432`.
+
+    - `DATABASE_NAME`: Esta variável define o nome do banco de dados PostgreSQL a ser utilizado.
+
 # Configuração do Banco de Dados PostgreSQL (Opcional)
 
 Este projeto utiliza o PostgreSQL como banco de dados. Você pode optar por configurar e iniciar o banco de dados localmente utilizando Docker, ou instalar e configurar o PostgreSQL manualmente em sua máquina.
@@ -49,8 +59,9 @@ Se você escolher utilizar Docker Compose, siga as instruções abaixo:
 
 Execute o seguinte comando para iniciar o banco de dados PostgreSQL em um contêiner Docker:
 
-`bash`
+```bash
 docker-compose up -d
+```
 
 O banco de dados PostgreSQL será iniciado em um contêiner chamado database_teste.
 
@@ -58,9 +69,12 @@ O banco de dados PostgreSQL será iniciado em um contêiner chamado database_tes
 
 Para iniciar o servidor, execute o seguinte comando:
 
+```bash
 npm start
+```
 
 O servidor será iniciado na porta configurada no arquivo `.env`.
+O prisma studio será aberto na porta `555` para a visualização do banco de dados PostgreSQL
 
 ## Rotas da API
 
