@@ -7,7 +7,7 @@ Este projeto consiste em um sistema de gerenciamento de clientes e otimização 
 ### Parte 1: Gerenciamento de Clientes
 
 - Listagem de clientes cadastrados
-- Filtragem de clientes pelo nome
+- Filtragem de clientes com base nas informações cadastradas (nome, email e telefone)
 - Cadastro de novos clientes
 
 ### Parte 2: Otimização de Rotas
