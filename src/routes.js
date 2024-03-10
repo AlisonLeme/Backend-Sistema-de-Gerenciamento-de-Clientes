@@ -7,8 +7,8 @@ const routes = express.Router();
 // Listar todos os clientes
 routes.get("/clientes", clientController.getClients);
 
-// Filtrar clientes por nome
-routes.get("/clientes/:nome", clientController.filterClient);
+// Filtrar clientes
+routes.get("/clientes/:data", clientController.filterClient);
 
 routes.post("/clientes", clientController.registerClient);
 // Cadastrar novo cliente

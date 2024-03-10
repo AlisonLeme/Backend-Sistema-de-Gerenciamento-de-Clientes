@@ -14,21 +14,39 @@ module.exports = {
   },
   // Filtrar clientes por nome
   async filterClient(req, res) {
-    const { nome } = req.params;
+    const { data } = req.params;
     try {
       const clientes = await prisma.client.findMany({
         where: {
-          nome: {
-            contains: nome,
-            mode: "insensitive", // Ignora a diferença entre maiúsculas e minúsculas
-          },
+          OR: [
+            {
+              nome: {
+                contains: data,
+                mode: "insensitive", // Ignora a diferença entre maiúsculas e minúsculas
+              },
+            },
+            {
+              email: {
+                contains: data,
+                mode: "insensitive",
+              },
+            },
+            {
+              telefone: {
+                contains: data,
+                mode: "insensitive",
+              },
+            },
+          ],
         },
       });
 
       if (clientes.length === 0) {
         return res
           .status(404)
-          .json({ error: "Nenhum cliente encontrado com o nome fornecido" });
+          .json({
+            error: "Nenhum cliente encontrado com o critério fornecido",
+          });
       }
 
       res.json(clientes);
