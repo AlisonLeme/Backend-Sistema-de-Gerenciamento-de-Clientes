@@ -7,7 +7,7 @@ module.exports = {
   async calculateRoute(req, res) {
     try {
       // Recuperar todas as coordenadas dos clientes do banco de dados
-      const clientes = await prisma.client.findMany();
+      const clientes = await prisma.$queryRaw`SELECT * FROM "Client"`;
 
       // Calcular a distância entre a empresa (0,0) e cada cliente
       const clientesComDistancia = clientes.map((cliente) => {
