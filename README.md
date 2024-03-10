@@ -2,6 +2,8 @@
 
 Este projeto consiste em um sistema de gerenciamento de clientes e otimização de rotas para uma empresa que realiza limpeza em residências. O backend foi desenvolvido em Node.js utilizando PostgreSQL como banco de dados.
 
+Versão do node utilizada: `v21.2.0`
+
 ## Funcionalidades
 
 ### Parte 1: Gerenciamento de Clientes

@@ -14,4 +14,7 @@ model Client {
   telefone     String
   coordenadaX  Float
   coordenadaY  Float
+
+  //Configuração para criar a tabela caso não exista
+  @@map(name:"Client")
 }
